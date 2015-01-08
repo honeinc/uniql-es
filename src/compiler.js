@@ -36,11 +36,7 @@ var generators = {
         return ' ' + field + ': { "$in": [ ' + value + ' ] }\n';
     },
     "!": function( node ) {
-        var result = [];
-        node.arguments.forEach( function( _node ) {
-            result.push( _processNode( _node ) );
-        } );
-        return ' { "bool": { "must_not": [ ' + result.join( ',\n' ) + ' ] } }\n'; 
+        return ' { "bool": { "must_not": [ ' + _processNode( node.arguments[ 0 ] ) + ' ] } }\n'; 
     },
     "==": function( node ) {
         var comparison = _extractComparison( node );
