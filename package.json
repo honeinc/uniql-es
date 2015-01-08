@@ -1,0 +1,36 @@
+{
+  "name": "uniql-es",
+  "version": "0.0.1",
+  "description": "Produces ElasticSearch queries from UniQL ASTs.",
+  "main": "src/compiler.js",
+  "scripts": {
+    "test": "mocha tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/honeinc/uniql-es.git"
+  },
+  "keywords": [
+    "uniql",
+    "elasticsearch",
+    "elastic",
+    "search",
+    "query",
+    "ast",
+    "dsl"
+  ],
+  "author": "Andy Burke <aburke@bitflood.org>",
+  "contributors": [ {
+    "name": "Abraham Haskins",
+    "email": "abe@rigidflame.com"
+  } ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/honeinc/uniql-mongodb/issues"
+  },
+  "devDependencies": {
+    "mocha": "~2.0.1"
+  },
+  "dependencies": {
+  }
+}
