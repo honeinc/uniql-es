@@ -1,8 +1,7 @@
-UniQL-MongoDB
+UniQL-ES
 =======
 
-This generates MongoDB queries based on [UniQL](https://github.com/honeinc/uniql) ASTs.
-
+This generates ElasticSearch queries based on [UniQL](https://github.com/honeinc/uniql) ASTs.
 
 ## License
 
