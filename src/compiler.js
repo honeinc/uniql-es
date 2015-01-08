@@ -116,6 +116,5 @@ function _processNode( node ) {
 
 function compile( tree ) {
     var json = '{ "query" : { "filtered" : { "filter": [ ' + _processNode( tree ) + ' ] } } }';
-    console.log( json );
     return JSON.parse( json );
 }
