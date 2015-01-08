@@ -81,19 +81,19 @@ function _extractComparison( node ) {
     node.arguments.forEach( function( _node ) {
         if ( _node.type === 'SYMBOL' ) {
             if ( symbol ) {
-                throw new Error( 'MONGODB: You can only specify one symbol in a comparison.' );
+                throw new Error( 'ELASTICSEARCH: You can only specify one symbol in a comparison.' );
             }
             symbol = _node;
         } else {
             if ( value ) {
-                throw new Error( 'MONGODB: You can only specify one value in a comparison.' );
+                throw new Error( 'ELASTICSEARCH: You can only specify one value in a comparison.' );
             }
             value = _node;
         }
     } );
 
     if ( !( symbol && value ) ) {
-        throw new Error( 'MONGODB: Invalid comparison, could not find both symbol and value.' );
+        throw new Error( 'ELASTICSEARCH: Invalid comparison, could not find both symbol and value.' );
     }
 
     return {
