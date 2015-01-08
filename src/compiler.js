@@ -38,7 +38,7 @@ var generators = {
     "!": function( node ) {
         var result = [];
         node.arguments.forEach( function( _node ) {
-            result.push( ' { ' + _processNode( _node ) + '}' );
+            result.push( _processNode( _node ) );
         } );
         return ' { "bool": { "must_not": [ ' + result.join( ',\n' ) + ' ] } }\n'; 
     },
