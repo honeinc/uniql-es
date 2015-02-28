@@ -13,6 +13,22 @@ var generators = {
         var value = _identity( node );
         return value.indexOf( '.' ) < 0 ? parseInt( value, 10 ) : parseFloat( value );
     },
+    "BOOLEAN": function( node ) {
+        var value = _identity( node );
+        return value.toLowerCase() === 'true';
+    },
+    "PRIMITIVE": function( node ) {
+        var value = _identity( node );
+        switch ( value.toLowerCase() ) {
+            case 'null':
+                value = null;
+                break;
+            case 'undefined':
+                value = undefined;
+                break;
+        }
+        return value;
+    },
     "STRING": _identity,
     "SYMBOL": _identity,
     

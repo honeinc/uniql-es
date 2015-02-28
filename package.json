@@ -1,6 +1,6 @@
 {
   "name": "uniql-es",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Produces ElasticSearch queries from UniQL ASTs.",
   "main": "src/compiler.js",
   "scripts": {
